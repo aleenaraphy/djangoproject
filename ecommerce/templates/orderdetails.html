@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid mt-5">
+    <center>
+        <h3 class="text-center text-secondary">{{m}}</h3>
+         <h5 class="text-center text-success">THankyou ...</h5>
+         <h6><a href="{% url 'shop:allcategory' %}">Continue...</a></h6>
+    </center>
+
+
+</div>
+
+{% endblock %}

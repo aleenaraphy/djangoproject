@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div>
+    <img src="{% static 'image/img11.png' %}" height="300px" width="50%">
+</div>
+<div class="container-fluid mt-4" style="margin-bottom=100px;">
+    <h3 class="text-center">our collection</h3>
+    <p style="line-height:1.8;text-align:justify;">A website footer is the section that appears at the bottom of every single page of your site. It typically includes important features like a copyright notice, an email capture, or links to resources. The footer is a valuable piece of real estate on your site.<br>A website footer is the section </p>
+</div>
+
+
+
+
+</center>
+<div class="container-fluid mt-4" style="margin-bottom:100px">
+    <h2 class="text-center fw-3">ABOUT AS</h2>
+    <p style="line-height:1.8;text-align:justify">An e-commerce website is one that allows people to buy and sell physical goods, services, and digital products over the internet rather than at a brick-and-mortar location. Through an e-commerce website, a business can process orders, accept payments, manage shipping and logistics, and provide customer service.</p>
+</div>
+
+
+<div class="container">
+<div class="row">
+
+{% for i in c %}
+<div class="col-sm-4">
+<div class="card" style="width: 18rem;">
+<!--  <img src="{{i.image.url}}" class="card-img-top" alt="...">-->
+  <div class="card-body">
+    <h5 class="card-title">{{i.name}}</h5>
+    <p class="card-text">{{i.desc}}</p>
+    <a href="{% url 'shop:allproducts' i.name %}" class="btn btn-primary">Product</a>
+      <br><br> <br><br>
+  </div>
+</div>
+    </div>
+
+{% endfor %}
+    </div>
+</div>
+{% endblock %}
